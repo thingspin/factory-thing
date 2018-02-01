@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/stdoutsub.dir/MQTTClient/samples/linux/stdoutsub.cpp.o  -o stdoutsub -Wl,-rpath,/home/pi/paho.mqtt.embedded-c/build -rdynamic libpaho-embed-mqtt3c.so 

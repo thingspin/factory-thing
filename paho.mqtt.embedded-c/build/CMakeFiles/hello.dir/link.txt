@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/hello.dir/MQTTClient/samples/linux/hello.cpp.o  -o hello -Wl,-rpath,/home/pi/paho.mqtt.embedded-c/build -rdynamic libpaho-embed-mqtt3c.so 

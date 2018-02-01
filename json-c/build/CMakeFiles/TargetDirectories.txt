@@ -1,0 +1,8 @@
+/home/pi/json-c/build/CMakeFiles/install/local.dir
+/home/pi/json-c/build/CMakeFiles/install.dir
+/home/pi/json-c/build/CMakeFiles/list_install_components.dir
+/home/pi/json-c/build/CMakeFiles/json-c.dir
+/home/pi/json-c/build/CMakeFiles/json-c-static.dir
+/home/pi/json-c/build/CMakeFiles/install/strip.dir
+/home/pi/json-c/build/CMakeFiles/edit_cache.dir
+/home/pi/json-c/build/CMakeFiles/rebuild_cache.dir

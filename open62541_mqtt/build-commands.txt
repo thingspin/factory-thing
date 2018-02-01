@@ -1,0 +1,41 @@
+mkdir build
+cd build
+
+cmake .. -DUA_ENABLE_SUBSCRIPTIONS=true -DUA_ENABLE_METHODCALLS=true -DUA_ENABLE_NODEMANAGEMENT=true -DUA_ENABLE_NONSTANDARD_MQTT=true
+make
+make package
+
+ls
+lonycell@soodev:~/works/opcua/opc/ua/open-src/open62541.git-20170523/build$ ll
+total 2204
+drwxrwxr-x 10 lonycell lonycell   4096 Jan  4 12:28 ./
+drwxrwxr-x 15 lonycell lonycell   4096 Jan  4 12:30 ../
+drwxrwxr-x  2 lonycell lonycell   4096 Jan  4 12:15 bin/
+drwxrwxr-x  2 lonycell lonycell   4096 Jan  4 12:14 cmake/
+-rw-rw-r--  1 lonycell lonycell  20539 Jan  4 12:14 CMakeCache.txt
+drwxrwxr-x  9 lonycell lonycell   4096 Jan  4 12:28 CMakeFiles/
+-rw-rw-r--  1 lonycell lonycell   4631 Jan  4 12:14 cmake_install.cmake
+-rw-r--r--  1 lonycell lonycell   3752 Jan  4 12:14 CPackConfig.cmake
+drwxrwxr-x  3 lonycell lonycell   4096 Jan  4 12:28 _CPack_Packages/
+-rw-r--r--  1 lonycell lonycell   4198 Jan  4 12:14 CPackSourceConfig.cmake
+drwxrwxr-x  3 lonycell lonycell   4096 Jan  4 12:14 doc/
+drwxrwxr-x  2 lonycell lonycell   4096 Jan  4 12:14 doc_src/
+-rw-rw-r--  1 lonycell lonycell   5247 Jan  4 12:28 install_manifest.txt
+-rw-rw-r--  1 lonycell lonycell  56997 Jan  4 12:14 Makefile
+drwxrwxr-x  3 lonycell lonycell   4096 Jan  4 12:14 mqtt/
+-rw-rw-r--  1 lonycell lonycell 824732 Jan  4 12:28 open62541-0.2.0-Linux.deb
+-rw-rw-r--  1 lonycell lonycell 446332 Jan  4 12:28 open62541-0.2.0-Linux.rpm
+-rw-rw-r--  1 lonycell lonycell 826669 Jan  4 12:28 open62541-0.2.0-Linux.tar.gz
+-rw-r--r--  1 lonycell lonycell   1269 Jan  4 12:14 open62541ConfigVersion.cmake
+drwxrwxr-x  2 lonycell lonycell   4096 Jan  4 12:14 src_generated/
+
+
+cd bin
+ls 
+lonycell@soodev:~/works/opcua/opc/ua/open-src/open62541.git-20170523/build/bin$ ll
+total 3036
+drwxrwxr-x  2 lonycell lonycell    4096 Jan  4 12:15 ./
+drwxrwxr-x 10 lonycell lonycell    4096 Jan  4 12:28 ../
+-rw-r--r--  1 lonycell lonycell    4008 Jan  4 12:15 config.json
+-rw-rw-r--  1 lonycell lonycell 1760220 Jan  4 12:14 libopen62541.a
+-rwxrwxr-x  1 lonycell lonycell 1334000 Jan  4 12:14 opcua-mqtt-bridge*

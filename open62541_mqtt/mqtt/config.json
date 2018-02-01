@@ -1,0 +1,138 @@
+{
+    "device-configuration": {
+        "Device": {
+            "deviceID": "sensor0"
+        }
+    },
+    "server-configuration": {
+        "opcuaServer": {
+            //"EndpointURL": "opc.tcp://192.168.50.52:4840",
+            "EndpointURL": "opc.tcp://192.168.2.3:4987/splunk",
+            //"EndpointURL": "opc.tcp://localhost:16664",
+
+            "publishIntervalUs": 100,
+            "asycRequestSupported": false,
+            "method": "poll"
+        },
+        "mqttBrocker": {
+            "enable": false,
+            //"ip": "localhost",
+            "ip" : "192.168.2.104",
+            //"ip" : "192.168.2.10",
+            //"port": 1883,
+            "port": 5671,
+            "topicBase": "topic"
+        },
+        "amqpRabbit": {
+            "enable": true,
+            //"ip": "localhost",
+            "ip" : "192.168.2.104",
+            "port": 5671,
+            "topicBase": "topic"
+        },
+        "tcpSever": {
+            "enable": false,
+            "ip": "192.168.2.104",
+            "port": 5555,
+            "sampleIntervalUs": 100,
+            "singleshot": true /* at now : should be true */
+        }
+    },
+
+    // 1usec = 1
+    // 1msec = 1000
+    // 1sec = 1000000
+    // 1min = 60000000
+
+    // 10msec = 10000
+    // 30msec = 30000
+    // 50msec = 50000
+    // 100msec = 100000
+    // 300msec = 300000
+    // 500msec = 500000
+
+    // 2sec = 2000000
+    // 3sec = 3000000
+    // 5sec = 5000000
+    // 10sec = 10000000
+    // 30sec = 30000000
+
+    "node-map": [
+
+        // Smart Thermal sensor.
+        {
+            "name": "OPC/UA Thermal Camera Infomation Model",
+            "enable": false,
+            "method": "event",
+            "intervalUSec": 200,
+            "topic": "temp/bx/1",
+            "mqtt": false,
+            "format": "json",
+            "nodes": [
+                { "id": "ns=1;i=1456", "topic": "min", "alias": "" },
+                { "id": "ns=1;i=1457", "topic": "max", "alias": "" },
+                { "id": "ns=1;i=1458", "topic": "avg", "alias": "" }
+            ]
+        },
+
+        // opc ua and opc classic variables
+        {
+            "name": "Math",
+            "enable": true,
+            "method": "poll",
+            "intervalUSec": 3000,
+            "topic": "math",
+            "mqtt": false,
+            "amqp": true,
+            "tcp": false,
+            "format": "kv",
+            "nodes": [
+                { "id": "ns=3;s=OPC.maths.sin", "topic": "sin", "alias": "" },
+                { "id": "ns=3;s=OPC.maths.cos", "topic": "cos", "alias": "" }
+            ]
+        },
+        {
+            "name": "OPC Classic",
+            "enable": false,
+            "method": "poll",
+            "intervalUSec": 2000000,
+            "topic": "Objects/Server",
+            "mqtt": true,
+            "format": "json",
+            "nodes": [
+                { "id": "ns=0;i=2255", "topic": "NamespaceArray", "alias": "" }
+            ]
+        },
+
+        // lonycell's local demo server
+        {
+            "name": "OPC/UA Demo",
+            "enable": false,
+            "method": "poll",
+            "intervalUSec": 200,
+            "topic": "opc-ua",
+            "mqtt": false,
+            "tcp": true, 
+            "format": "kv",
+            "nodes": [
+                { "id": "ns=1;i=51001", "topic": "bool", "alias": "" },
+                { "id": "ns=1;i=51028", "topic": "float", "alias": "" },
+                { "id": "ns=1;i=51031", "topic": "double", "alias": "" },
+                { "id": "ns=1;i=51034", "topic": "string", "alias": "" },
+                { "id": "ns=0;i=2255", "topic": "namespace", "alias": "" }
+            ]
+        },
+        {
+            "name": "OPC/UA Thermal Camera Infomation Model",
+            "enable": false,
+            "method": "poll",
+            "intervalUSec": 200,
+            "topic": "server",
+            "mqtt": true,
+            "format": "json",
+            "nodes": [
+                { "id": "ns=0;i=2255", "topic": "namespace", "alias": "" }
+            ]
+        }
+    ]
+}

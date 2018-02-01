@@ -1,0 +1,1 @@
+/usr/bin/cc  -fPIC -g  -shared -Wl,-soname,libpaho-embed-mqtt3cc.so -o libpaho-embed-mqtt3cc.so CMakeFiles/paho-embed-mqtt3cc.dir/MQTTClient-C/src/MQTTClient.c.o CMakeFiles/paho-embed-mqtt3cc.dir/MQTTClient-C/src/linux/MQTTLinux.c.o 

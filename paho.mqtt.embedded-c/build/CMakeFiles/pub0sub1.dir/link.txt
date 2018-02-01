@@ -1,0 +1,1 @@
+/usr/bin/cc  -g   CMakeFiles/pub0sub1.dir/MQTTPacket/samples/pub0sub1.c.o CMakeFiles/pub0sub1.dir/MQTTPacket/samples/transport.c.o  -o pub0sub1 -Wl,-rpath,/home/pi/paho.mqtt.embedded-c/build -rdynamic libpaho-embed-mqtt3c.so 
