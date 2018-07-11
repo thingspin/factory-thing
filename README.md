@@ -1,6 +1,6 @@
 ## Abstract
 It serves as a kind of bridge between server to other-clients.
-connection with OPCUA server( https://github.com/thingspin/open62541/tree/opcua_sensor_server ) and gathering data, send data using MQTT or TCP 
+connection with OPCUA server( https://github.com/thingspin/factory-thing-opcua-server ) and gathering data, send data using MQTT or TCP 
 
 
 ## Using open62541
