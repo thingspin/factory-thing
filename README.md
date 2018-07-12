@@ -33,10 +33,10 @@ The Paho embedded client libraries arose out of the desire to allow the smallest
 - CMakeLists.txt file need modify
 - file exist path : open62541_mqtt/mqtt/CMakeLists.txt 
 
-    - EX) line 1: set(EXTER_MQTT_ROOT "/home/mint/paho.mqtt.embedded-c" CACHE STRING "MQTT paho header and library root path") ->  set(EXTER_MQTT_ROOT "/home/test/factory-thing/paho.mqtt.embedded-c"
-    - EX) line 2: set(EXTER_JSON_ROOT "/home/mint/json-c" CACHE STRING "JSON header and library root path") ->  set(EXTER_MQTT_ROOT "/home/test/factory-thing/json-c"
-    - EX) line 96 : add_excutable( opcua-mqtt-bridge 
-    - EX) line 98 : target_link_libraries( opcua-mqtt-bridge
+    - EX) line 1: set(EXTER_MQTT_ROOT "/home/mint/paho.mqtt.embedded-c"  ->  set(EXTER_MQTT_ROOT "/home/test/factory-thing/paho.mqtt.embedded-c"
+    - EX) line 2: set(EXTER_JSON_ROOT "/home/mint/json-c" ->  set(EXTER_MQTT_ROOT "/home/test/factory-thing/json-c"
+    - EX) line 96 : add_excutable( opcua-mqtt-bridge -> add_excutable( factory-thing
+    - EX) line 98 : target_link_libraries( opcua-mqtt-bridge -> add_excutable( factory-thing
 2) build
     - mkdir build
     - cd build
