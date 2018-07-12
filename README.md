@@ -40,7 +40,7 @@ The Paho embedded client libraries arose out of the desire to allow the smallest
     - missing LATEX : 
 
 3) config.json modify
-- open62541_mqtt/build/bin
+- file exist path : open62541_mqtt/build/bin
 ```c
 //EXAMPLE
     {
@@ -95,4 +95,5 @@ The Paho embedded client libraries arose out of the desire to allow the smallest
 }
 ```
 4) run
-    -  ./opcua-mqtt-bridge --config config.json
+    - file exist path : open62541_mqtt/build/bin
+    - ./opcua-mqtt-bridge --config config.json 
