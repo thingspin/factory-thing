@@ -4,8 +4,8 @@ connection with OPCUA server( https://github.com/thingspin/factory-thing-opcua-s
 
 ## Screen Shot
 <div>
-<img src="https://user-images.githubusercontent.com/32695107/42621436-c339f888-85f8-11e8-82da-89cdad6df9c0.png" width="50%"></img>
-<img src=https://user-images.githubusercontent.com/32695107/42621572-2a717594-85f9-11e8-8ab2-5ccfbe07eddb.png" width="50%"></img>
+<img src="https://user-images.githubusercontent.com/32695107/42621436-c339f888-85f8-11e8-82da-89cdad6df9c0.png" width="60%"></img>
+<img src="https://user-images.githubusercontent.com/32695107/42621818-c9985d9a-85f9-11e8-8670-62cbb11b4816.png" width="60%"></img>
                                                                                                                           </div>                                                                                                                         
 ## Using open62541
 A general introduction to OPC UA and the open62541 documentation can be found at http://open62541.org/doc/current.
