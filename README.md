@@ -27,6 +27,8 @@ The Paho embedded client libraries arose out of the desire to allow the smallest
     - make
 
 
+
+
 1) need to modify the path ( EX)/home/mint/ )
 - CMakeLists.txt file need modify
 - file exist path : open62541_mqtt/mqtt/CMakeLists.txt 
