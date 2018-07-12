@@ -1,6 +1,6 @@
 ## Abstract
 It serves as a kind of bridge between server to other-clients.
-connection with OPCUA server( https://github.com/thingspin/open62541/tree/opcua_sensor_server ) and gathering data, send data using MQTT or TCP 
+connection with OPCUA server( https://github.com/thingspin/factory-thing-opcua-server ) and gathering data, send data using MQTT or TCP 
 
 
 ## Using open62541
@@ -13,28 +13,43 @@ JSON-C implements a reference counting object model that allows you to easily co
 ## Using paho.mqtt.embedded-c
 The Paho embedded client libraries arose out of the desire to allow the smallest microcontrollers to easily connect to MQTT servers.
 
-## Implementation
 ### Pre-condition
 - mqtt : install ( https://mosquitto.org/  |  mosquitto broker/ client)
+    - sudo apt-get install mosquitto
 - json-c : build ( included )
+    - mkdir build
+    - cmake ..
+    - make
 - paho.mqtt.embedded-c : build ( included )
+    - mkdir build
+    - cmake ..
+    - make
 
 
-1) need to modify the path ( /home/mint/ )
-- open62541_mqtt/mqtt/CMakeLists.txt  need  modify
+## Implementation
+1. modify CmakeLists
+- CMakeLists.txt file need modify
+- file exist path : open62541_mqtt/mqtt/CMakeLists.txt 
 
-    - EX) set(EXTER_MQTT_ROOT "/home/mint/paho.mqtt.embedded-c" CACHE STRING "MQTT paho header and library root path")
-    - EX) set(EXTER_JSON_ROOT "/home/mint/json-c" CACHE STRING "JSON header and library root path")
-
-2) build
+    - EX) line 1: set(EXTER_MQTT_ROOT "/home/mint/paho.mqtt.embedded-c"  ->  set(EXTER_MQTT_ROOT "/home/test/factory-thing/paho.mqtt.embedded-c"
+    - EX) line 2: set(EXTER_JSON_ROOT "/home/mint/json-c" ->  set(EXTER_MQTT_ROOT "/home/test/factory-thing/json-c"
+    - EX) line 96 : add_excutable( opcua-mqtt-bridge -> add_excutable( factory-thing
+    - EX) line 98 : target_link_libraries( opcua-mqtt-bridge -> add_excutable( factory-thing
+2. build 'open62541_mqtt'
     - mkdir build
     - cd build
     - cmake .. -DUA_ENABLE_SUBSCRIPTIONS=true -DUA_ENABLE_METHODCALLS=true -DUA_ENABLE_NODEMANAGEMENT=true -DUA_ENABLE_NONSTANDARD_MQTT=true
     - make ( created bin folder : config.json, libopen62541.a, opcua-mqtt-bridge)
 
+    Tip
 
-3) config.json modify
-- open62541_mqtt/build/bin
+    - cmake CXX can't find : sudo apt-get update && sudo apt-get install build-essential
+    - can't find sphinx : sudo apt-get install python-sphinx graphviz
+    & sudo apt-get install python-sphinx-rtd-theme 
+    - missing LATEX : sudo apt-get install kile
+
+3. config.json modify
+- file exist path : open62541_mqtt/build/bin
 ```c
 //EXAMPLE
     {
@@ -88,5 +103,6 @@ The Paho embedded client libraries arose out of the desire to allow the smallest
     ]
 }
 ```
-4) run
-    -  ./opcua-mqtt-bridge --config config.json
+4. run
+    - file exist path : open62541_mqtt/build/bin
+    - ./opcua-mqtt-bridge --config config.json 
