@@ -16,8 +16,15 @@ The Paho embedded client libraries arose out of the desire to allow the smallest
 ## Implementation
 ### Pre-condition
 - mqtt : install ( https://mosquitto.org/  |  mosquitto broker/ client)
+    - sudo apt-get install mosquitto
 - json-c : build ( included )
+    - mkdir build
+    - cmake ..
+    - make
 - paho.mqtt.embedded-c : build ( included )
+    - mkdir build
+    - cmake ..
+    - make
 
 
 1) need to modify the path ( EX)/home/mint/ )
