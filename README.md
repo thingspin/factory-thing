@@ -35,7 +35,9 @@ The Paho embedded client libraries arose out of the desire to allow the smallest
     Tip
 
     - cmake CXX can't find : sudo apt-get update && sudo apt-get install build-essential
-
+    - can't find sphinx : sudo apt-get install python-sphinx graphviz
+    & sudo apt-get install python-sphinx-rtd-theme 
+    - missing LATEX : 
 
 3) config.json modify
 - open62541_mqtt/build/bin
