@@ -27,7 +27,7 @@ The Paho embedded client libraries arose out of the desire to allow the smallest
 
 
 ## Implementation
-###1) modify CmakeLists
+1. modify CmakeLists
 - CMakeLists.txt file need modify
 - file exist path : open62541_mqtt/mqtt/CMakeLists.txt 
 
@@ -35,7 +35,7 @@ The Paho embedded client libraries arose out of the desire to allow the smallest
     - EX) line 2: set(EXTER_JSON_ROOT "/home/mint/json-c" ->  set(EXTER_MQTT_ROOT "/home/test/factory-thing/json-c"
     - EX) line 96 : add_excutable( opcua-mqtt-bridge -> add_excutable( factory-thing
     - EX) line 98 : target_link_libraries( opcua-mqtt-bridge -> add_excutable( factory-thing
-###2) build 'open62541_mqtt'
+2. build 'open62541_mqtt'
     - mkdir build
     - cd build
     - cmake .. -DUA_ENABLE_SUBSCRIPTIONS=true -DUA_ENABLE_METHODCALLS=true -DUA_ENABLE_NODEMANAGEMENT=true -DUA_ENABLE_NONSTANDARD_MQTT=true
@@ -48,7 +48,7 @@ The Paho embedded client libraries arose out of the desire to allow the smallest
     & sudo apt-get install python-sphinx-rtd-theme 
     - missing LATEX : sudo apt-get install kile
 
-###3) config.json modify
+3. config.json modify
 - file exist path : open62541_mqtt/build/bin
 ```c
 //EXAMPLE
@@ -103,6 +103,6 @@ The Paho embedded client libraries arose out of the desire to allow the smallest
     ]
 }
 ```
-###4) run
+4. run
     - file exist path : open62541_mqtt/build/bin
     - ./opcua-mqtt-bridge --config config.json 
