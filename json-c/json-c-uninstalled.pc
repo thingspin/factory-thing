@@ -1,0 +1,11 @@
+prefix=
+exec_prefix=
+libdir=/home/pi/json-c
+includedir=/home/pi/json-c
+
+Name: json
+Description: JSON implementation in C
+Version: 0.13.99
+Requires:
+Libs:  -L/home/pi/json-c -ljson-c
+Cflags: -I/home/pi/json-c
