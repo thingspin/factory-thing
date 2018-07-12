@@ -3,7 +3,10 @@ It serves as a kind of bridge between server to other-clients.
 connection with OPCUA server( https://github.com/thingspin/factory-thing-opcua-server ) and gathering data, send data using MQTT or TCP 
 
 ## Screen Shot
-<img src="https://user-images.githubusercontent.com/32695107/42621436-c339f888-85f8-11e8-82da-89cdad6df9c0.png" width="90%"></img>
+web dashboard
+<img src="https://user-images.githubusercontent.com/32695107/42621436-c339f888-85f8-11e8-82da-89cdad6df9c0.png" width="50%"></img>
+opcua-mqtt-bridge
+<img src=https://user-images.githubusercontent.com/32695107/42621572-2a717594-85f9-11e8-8ab2-5ccfbe07eddb.png" width="50%"></img>
 ## Using open62541
 A general introduction to OPC UA and the open62541 documentation can be found at http://open62541.org/doc/current.
 Past releases of the library can be downloaded at https://github.com/open62541/open62541/releases.
