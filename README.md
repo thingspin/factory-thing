@@ -32,6 +32,8 @@ The Paho embedded client libraries arose out of the desire to allow the smallest
     - cmake .. -DUA_ENABLE_SUBSCRIPTIONS=true -DUA_ENABLE_METHODCALLS=true -DUA_ENABLE_NODEMANAGEMENT=true -DUA_ENABLE_NONSTANDARD_MQTT=true
     - make ( created bin folder : config.json, libopen62541.a, opcua-mqtt-bridge)
 
+Tip
+    - cmake CXX can't find : sudo apt-get update && sudo apt-get install build-essential
 
 3) config.json modify
 - open62541_mqtt/build/bin
