@@ -6,7 +6,9 @@ connection with OPCUA server( https://github.com/thingspin/factory-thing-opcua-s
 <div>
 <img src="https://user-images.githubusercontent.com/32695107/42621436-c339f888-85f8-11e8-82da-89cdad6df9c0.png" width="60%"></img>
 <img src="https://user-images.githubusercontent.com/32695107/42621818-c9985d9a-85f9-11e8-8670-62cbb11b4816.png" width="60%"></img>
-                                                                                                                          </div>                                                                                                                         
+</div>
+
+
 ## Using open62541
 A general introduction to OPC UA and the open62541 documentation can be found at http://open62541.org/doc/current.
 Past releases of the library can be downloaded at https://github.com/open62541/open62541/releases.
